@@ -5,22 +5,19 @@ import { ref, onMounted } from 'vue'
 const customers = ref([])
 
 const getCustomers = () => {
-    axios.get('/api/customers')
-        .then(res => customers.value = res.data).catch((error) => console.log(error));
-    // .catch(error = console.log(error))
+    axios.get('/customers')
+        .then(res => customers.value = res.data)
+        .catch(error = console.log(error))
 }
 
 onMounted(() => getCustomers())
 
 </script>
 <template>
-    <!-- <router-link to="/education-savings">Home</router-link> -->
     <div class="text-center justify-content-start">
         <a href="/" style="text-decoration: none; color: inherit;">
-            <h2 class="mb-4">Savings management</h2>
+            <h2 class="mb-4">Savings management ps</h2>
         </a>
-
-
 
         <div class="container">
             <div class="row">
